@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript - Exercícios: Módulo 02 - 3º exercício</title>
+    </head>
+    <!-- 
+        A partir do seguinte vetor:
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            - Diego
+            - Gabriel
+            - Lucas
+    -->
+    <body>
+        <div id='app'>
+            <ul id='lista'></ul>
+        </div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            nomes.forEach(createItemList);
+
+            function createItemList(element, index, array) {
+                var itemElement = document.createElement('li');
+                itemElement.innerHTML = element;
+
+                var containerElement = document.querySelector('#lista');
+                containerElement.appendChild(itemElement);
+            }       
+            
+        </script>
+
+    </body>
+</html>
